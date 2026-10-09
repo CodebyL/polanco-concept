@@ -2,290 +2,383 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Polanco Bros Landscaping (website concept)</title>
-<meta name="description" content="Website concept for Polanco Bros Landscaping, South Hempstead, NY: over 30 years of landscaping across Nassau and Suffolk.">
+<meta name="description" content="Website concept for Polanco Bros Landscaping, LLC of South Hempstead, NY: landscape design, lawn care, clean-ups, garden installs and more across Nassau and Suffolk.">
+<meta name="robots" content="noindex">
+<script>document.documentElement.className+=" js"</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
-*,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:auto}
-body{margin:0;overflow-x:hidden}
-img{max-width:100%;display:block}
-button,input,select,textarea{font:inherit;color:inherit}
-.skip{position:absolute;left:-999px;top:0;z-index:999;padding:.8rem 1rem;background:#000;color:#fff}
-.skip:focus{left:1rem}
-:focus-visible{outline:3px solid var(--focus,#2a7fff);outline-offset:3px}
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease,cubic-bezier(.2,.7,.2,1)),transform 1s var(--ease,cubic-bezier(.2,.7,.2,1));transition-delay:calc(var(--d,0)*90ms)}
-.js .rv.in{opacity:1;transform:none}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-dialog.lbx{border:0;padding:0;background:rgba(8,8,8,.96);color:#fff;width:100vw;height:100vh;max-width:none;max-height:none}
-dialog.lbx[open]{display:grid;grid-template-rows:1fr auto auto;justify-items:center;align-items:center;gap:.6rem;padding:1rem}
-dialog.lbx img{max-width:100%;max-height:100%;min-height:0;object-fit:contain;border-radius:10px}
-dialog.lbx::backdrop{background:#080808}
-dialog.lbx .lbb{display:flex;gap:.6rem}
-dialog.lbx .lbb button{min-width:54px;min-height:48px;border-radius:10px;border:1.5px solid #fff;background:none;color:#fff;font-weight:600;cursor:pointer;padding:0 1rem}
-.demo-note{font-size:.86rem;opacity:.8;margin-top:.8rem}
+:root{
+ --ever:#18302a;--ever2:#21403a;--sage:#8fa98a;--cream:#f5f1e6;--card:#fffdf7;--ink:#17231f;--soft:#56645d;--line:#ddd6c4;
+ --terra:#c8643b;--terra-d:#a44f2c;--gold:#e2b04a;
+ --serif:"Gloock",Georgia,serif;--sans:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif;
+ --ease:cubic-bezier(.2,.7,.2,1);--wrap:1240px;
+}
+*{box-sizing:border-box}
 [hidden]{display:none!important}
-/* booking widget */
-.bk{display:grid;gap:1.2rem}
-.bk h4{margin:0 0 .6rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
-.bk .days{display:grid;grid-template-columns:repeat(7,1fr);gap:.4rem}
-.bk .days button{min-height:58px;border-radius:12px;border:1.5px solid var(--bk-line,#ccc);background:var(--bk-bg,#fff);cursor:pointer;display:grid;place-items:center;line-height:1.1;padding:.3rem 0;transition:transform .2s,border-color .2s,background .2s}
-.bk .days button small{font-size:.68rem;opacity:.7;text-transform:uppercase;letter-spacing:.06em}
-.bk .days button b{font-size:1.15rem}
-.bk .days button:hover:not(:disabled){transform:translateY(-2px);border-color:var(--bk-acc,#000)}
-.bk .days button:disabled{opacity:.35;cursor:not-allowed}
-.bk .days button[aria-pressed=true]{background:var(--bk-acc,#000);border-color:var(--bk-acc,#000);color:var(--bk-on,#fff)}
-.bk .slots{display:flex;flex-wrap:wrap;gap:.5rem}
-.bk .slots button{min-height:46px;padding:0 1.1rem;border-radius:999px;border:1.5px solid var(--bk-line,#ccc);background:var(--bk-bg,#fff);cursor:pointer;font-weight:600}
-.bk .slots button[aria-pressed=true]{background:var(--bk-acc,#000);border-color:var(--bk-acc,#000);color:var(--bk-on,#fff)}
-.bk .slots button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
-.bk .sum{border-radius:14px;padding:1rem 1.1rem;background:var(--bk-sum,#f3f3f3);font-weight:600}
-.bk label{display:grid;gap:.35rem;font-size:.9rem;font-weight:600}
-.bk input,.bk select,.bk textarea{min-height:50px;border-radius:12px;border:1.5px solid var(--bk-line,#ccc);background:var(--bk-bg,#fff);padding:.6rem .85rem;width:100%}
-.bk .two{display:grid;gap:.8rem}
-@media(min-width:620px){.bk .two{grid-template-columns:1fr 1fr}}
-.bk .err{color:#c0392b;font-size:.82rem;font-weight:600}
-/* admin demo */
-.adm{display:grid;gap:1rem}
-.adm .pick{display:flex;gap:.5rem;flex-wrap:wrap}
-.adm .pick button{width:74px;height:74px;border-radius:10px;overflow:hidden;padding:0;border:3px solid transparent;cursor:pointer;background:none}
-.adm .pick button img{width:100%;height:100%;object-fit:cover}
-.adm .pick button[aria-pressed=true]{border-color:var(--adm-acc,#000)}
-.adm label{display:grid;gap:.35rem;font-size:.9rem;font-weight:600}
-.adm input{min-height:50px;border-radius:12px;border:1.5px solid var(--adm-line,#ccc);background:var(--adm-bg,#fff);padding:.6rem .85rem;width:100%}
-.adm .bar{display:flex;align-items:center;gap:.6rem;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.adm .bar i{width:10px;height:10px;border-radius:50%;background:#2ecc71;box-shadow:0 0 0 4px rgba(46,204,113,.25)}
-.flash{animation:flash 1.6s ease}
-@keyframes flash{0%{box-shadow:0 0 0 0 var(--adm-acc,#000);transform:scale(.96)}40%{box-shadow:0 0 0 8px var(--adm-acc,#000);transform:scale(1)}100%{box-shadow:0 0 0 0 transparent}}
-@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}*{animation:none!important}}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--terra);outline-offset:3px}
+.wrap{width:min(100% - 40px,var(--wrap));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:0;z-index:99;background:var(--ink);color:#fff;padding:8px 16px}
+.skip:focus{left:16px;top:16px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin:0}
+.kick{display:flex;align-items:center;gap:10px;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--terra-d);margin:0 0 18px}
+.kick::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.dark .kick{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 28px;border-radius:999px;border:1.5px solid transparent;font-weight:600;font-size:1rem;text-decoration:none;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease)}
+.btn:active{transform:scale(.97)}
+.btn-t{background:var(--terra);color:#fff}.btn-t:hover{background:var(--terra-d)}
+.btn-e{background:var(--ever);color:var(--cream)}.btn-e:hover{background:var(--ever2)}
+.btn-l{border-color:var(--ink);color:var(--ink)}.btn-l:hover{background:var(--ink);color:var(--cream)}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--d,0)*90ms)}
+.js .rv.in{opacity:1;transform:none}
+.concept{background:var(--ever);color:#cfd9cf;font-size:.8rem;text-align:center;padding:7px 16px}
+.concept a{color:#fff;font-weight:600}
 
-:root{--cream:#fbf6ea;--g1:#1e5631;--g2:#2f7a3f;--g3:#5fa64a;--g4:#a8d36a;--sky:#cfe9e4;--terra:#d9643a;--ink:#173021;--soft:#4f6455;--line:#e3dccb;--ease:cubic-bezier(.2,.7,.2,1);--sans:"Bricolage Grotesque",system-ui,sans-serif;--wrap:1200px;--focus:#d9643a;--bk-acc:#1e5631;--bk-sum:#f3eddc;--bk-line:#d9d1bd}
-body{background:var(--cream);color:var(--ink);font:500 1.06rem/1.6 var(--sans)}
-h1,h2,h3{margin:0;font-weight:800;letter-spacing:-.035em;line-height:.98}
-.wrap{width:min(100% - 2.4rem,var(--wrap));margin-inline:auto}
-.chip{display:inline-flex;align-items:center;gap:.5rem;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:.35rem .9rem;font-weight:700;font-size:.84rem;color:var(--g1)}
-.chip i{width:9px;height:9px;border-radius:50%;background:var(--terra)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:56px;padding:.6rem 1.6rem;border-radius:18px;border:0;background:var(--terra);color:#fff;font:800 1rem var(--sans);text-decoration:none;cursor:pointer;box-shadow:0 6px 0 #a8461f;transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(2px);box-shadow:0 4px 0 #a8461f}
-.btn:active{transform:translateY(6px);box-shadow:0 0 0 #a8461f}
-.btn.ghost{background:#fff;color:var(--g1);box-shadow:0 6px 0 var(--line)}
-header{position:sticky;top:0;z-index:50;background:rgba(251,246,234,.92);backdrop-filter:blur(10px)}
-header .wrap{display:flex;align-items:center;gap:1rem;min-height:74px}
-.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--g1)}
-.brand svg{width:42px;height:42px}
-.brand b{font:800 1.35rem/1 var(--sans);letter-spacing:-.04em;white-space:nowrap}
-.brand small{display:block;font:700 .66rem var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
-nav.main{margin-left:auto;display:none;gap:1.6rem}
-nav.main button{background:none;border:0;cursor:pointer;font:700 .96rem var(--sans);color:var(--ink);min-height:44px;padding:0}
-nav.main button:hover{color:var(--terra)}
-.hc{margin-left:auto}.hc .btn{min-height:46px;padding:.3rem 1.1rem;font-size:.9rem;box-shadow:0 4px 0 #a8461f}
-@media(min-width:960px){nav.main{display:flex}.hc{margin-left:1.4rem}}
-/* hero */
-.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--sky) 0%,#e8f3e7 55%,var(--cream) 100%)}
-.hero .hin{position:relative;z-index:3;padding-block:clamp(2.6rem,7vw,5rem) 0;text-align:center}
-.hero h1{font-size:clamp(3.2rem,10vw,7.6rem);color:var(--g1)}
-.hero h1 span{color:var(--terra)}
-.hero p{max-width:46ch;margin:1.2rem auto 1.8rem;color:var(--soft);font-size:1.15rem}
-.hero .cta{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center}
-.scape{position:relative;height:clamp(230px,34vw,420px);margin-top:-1rem}
-.scape svg{position:absolute;left:0;bottom:0;width:100%;height:100%}
-.scape .sun{position:absolute;right:12%;top:8%;width:clamp(60px,9vw,110px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#ffd36b 55%,rgba(255,211,107,0) 70%)}
-.layer{will-change:transform}
+/* header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(245,241,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr .wrap{display:flex;align-items:center;gap:28px;min-height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto;min-height:48px}
+.brand svg{width:40px;height:40px}
+.brand b{display:block;font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1}
+.brand small{display:block;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-top:3px}
+.nav{display:flex;gap:26px}
+.nav a{text-decoration:none;font-weight:500;padding:12px 0;transition:color .2s}
+.nav a:hover{color:var(--terra-d)}
+.hdr .btn{min-height:46px;padding:0 22px;font-size:.92rem}
+.menu{display:none;min-height:46px;min-width:48px;border-radius:999px;border:1.5px solid var(--ink);background:none;font-weight:600;padding:0 16px;cursor:pointer}
+@media(max-width:900px){
+ .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--cream);flex-direction:column;gap:0;padding:6px 20px 18px;border-bottom:1px solid var(--line)}
+ .nav.open{display:flex}.nav a{padding:16px 0;border-bottom:1px solid var(--line)}
+ .menu{display:inline-flex;align-items:center}.hdr .btn{display:none}
+}
+
+/* hero landscape */
+.hero{position:relative;height:min(92vh,820px);min-height:560px;overflow:hidden;background:#f3dcc0}
+.hero .layer{position:absolute;left:-2%;right:-2%;bottom:0;will-change:transform}
+.hero .layer svg{width:100%;height:auto}
+.hero .sky{position:absolute;inset:0;background:linear-gradient(#f6e6cf 0%,#f1d4b0 45%,#e9c39c 70%,#dfb48e 100%)}
+.hero .sun{position:absolute;left:68%;top:22%;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,#fff3d6 0 40%,rgba(255,226,170,.6) 41%,rgba(255,226,170,0) 70%)}
+.cloud{position:absolute;height:26px;border-radius:999px;background:rgba(255,250,240,.75);animation:drift linear infinite}
+.cloud::before{content:"";position:absolute;left:22%;top:-14px;width:46%;height:30px;border-radius:999px;background:inherit}
+@keyframes drift{from{transform:translateX(-30vw)}to{transform:translateX(130vw)}}
+.hero .copy{position:absolute;left:0;right:0;top:9%;z-index:5}
+.hero h1{font-size:clamp(3.2rem,8vw,7.4rem);color:var(--ever);max-width:9ch}
+.hero h1 .l{display:block;overflow:hidden;padding-bottom:.08em}
+.hero h1 .l>span{display:block}
+.js .hero h1 .l>span{transform:translateY(105%);transition:transform 1.1s var(--ease);transition-delay:calc(var(--i)*120ms + 200ms)}
+.js .hero.go h1 .l>span{transform:none}
+.hero .lead{font-size:1.15rem;color:#3b4a43;max-width:28em;margin:20px 0 26px}
+.hero .meta{display:inline-flex;align-items:center;gap:10px;margin-left:6px;font-weight:600;color:var(--ever)}
+@media(max-width:700px){.hero{height:auto;min-height:0;padding-bottom:62vw}.hero .copy{position:relative;top:0;padding-top:36px}.hero .sun{left:58%;top:52%;width:120px;height:120px}}
+
 /* stats */
-.stats{background:var(--g1);color:#eaf5df}
-.stats ul{list-style:none;margin:0;padding:2rem 0;display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
-@media(min-width:860px){.stats ul{grid-template-columns:repeat(4,1fr)}}
-.stats b{display:block;font:800 clamp(2.2rem,5vw,3.4rem)/1 var(--sans);color:var(--g4);letter-spacing:-.04em}
-.stats b span{font:inherit;color:inherit}
-.stats small{font-size:.92rem}
-.sec{padding-block:clamp(4rem,9vw,7rem)}
-.hd{text-align:center;max-width:720px;margin:0 auto 2.8rem}
-.hd h2{font-size:clamp(2.4rem,6vw,4.4rem);color:var(--g1);margin-top:1rem}
-.hd p{color:var(--soft);margin:.9rem 0 0}
-/* service tiles */
-.tiles{display:grid;gap:1rem;grid-template-columns:1fr 1fr}
-@media(min-width:900px){.tiles{grid-template-columns:repeat(4,1fr)}}
-.tile{position:relative;border-radius:26px;padding:1.4rem;min-height:210px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff;transition:transform .35s var(--ease)}
-.tile:hover{transform:translateY(-6px) rotate(-.6deg)}
-.tile svg{position:absolute;right:.6rem;top:.6rem;width:clamp(56px,14vw,96px);height:auto;opacity:.75}
-.tile h3{font-size:clamp(1.15rem,3.6vw,1.4rem);position:relative}
-.tile p{margin:.3rem 0 0;font-size:.9rem;opacity:.9;position:relative}
-.t1{background:var(--g2)}.t2{background:var(--terra)}.t3{background:var(--g1)}.t4{background:#c79a2c}.t5{background:#3c8a7a}.t6{background:#7a5a3a}.t7{background:var(--g3)}.t8{background:#2a3d33}
+.stats{background:var(--ever);color:var(--cream)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.stats div{padding:30px 22px 32px 0}
+.stats div+div{padding-left:22px;border-left:1px solid #2f4d45}
+.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:2.8rem;line-height:1}
+.stats span{display:block;margin-top:8px;color:#b9c8bd;font-size:.92rem}
+@media(max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr}.stats div:nth-child(3){padding-left:0;border-left:0}.stats div:nth-child(n+3){border-top:1px solid #2f4d45}.stats b{font-size:2.2rem}}
+
+section{padding:104px 0}
+@media(max-width:760px){section{padding:72px 0}}
+.head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:end;margin-bottom:48px}
+.head h2{font-size:clamp(2.4rem,5vw,4.4rem)}
+.head p{margin:0;color:var(--soft);font-size:1.1rem;max-width:32em}
+@media(max-width:860px){.head{grid-template-columns:1fr;gap:16px;margin-bottom:32px}}
+
+/* seasons */
+.seasons{padding-bottom:40px}
+.sg{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px}
+.stage{position:sticky;top:100px;height:min(74vh,620px);border-radius:28px;overflow:hidden;background:#cfe0d3;box-shadow:0 40px 70px -50px rgba(24,48,42,.6)}
+.stage svg{width:100%;height:100%}
+.stage .tag{position:absolute;left:16px;top:16px;background:rgba(255,253,247,.92);border-radius:999px;padding:7px 14px;font-weight:600;font-size:.85rem;display:flex;align-items:center;gap:8px}
+.stage .tag i{width:10px;height:10px;border-radius:50%;background:var(--terra)}
+.chap{min-height:78vh;display:flex;flex-direction:column;justify-content:center;padding:24px 0}
+.chap .n{font-family:var(--serif);font-size:1.1rem;color:var(--terra-d)}
+.chap h3{font-size:clamp(2rem,3.6vw,3.2rem);margin:8px 0 14px}
+.chap p{margin:0 0 18px;color:var(--soft);font-size:1.08rem}
+.chap ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.chap li{padding:7px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:500;font-size:.92rem}
+.chap{opacity:.35;transition:opacity .5s}
+.chap.cur{opacity:1}
+@media(max-width:900px){.sg{grid-template-columns:1fr;gap:0}.stage{top:76px;height:44vh;z-index:3;border-radius:0 0 22px 22px;margin:0 -20px}.chap{min-height:80vh;justify-content:flex-end;padding-bottom:14vh}}
+/* scene states */
+#scene{--sky1:#d8ecf3;--sky2:#f3efe2;--grass:#9cc27a;--grass2:#8bb56a;--leaf:#8fc06a;--leaf2:#78ad58;--hill:#b7d0a6;--stripe:0;--bloom:0;--bed:0;--fall:0;--pile:0}
+#scene .t{transition:fill 1s,opacity 1s,transform 1s var(--ease)}
+#scene.s-spring{--grass:#a9cc82;--grass2:#98bf72;--leaf:#a5cf7c;--leaf2:#8fbf68;--bloom:1}
+#scene.s-summer{--sky1:#bfe0f0;--sky2:#eef4ec;--grass:#6fa94e;--grass2:#5f9a42;--leaf:#5f9d46;--leaf2:#4f8a3a;--hill:#9fc28c;--stripe:1}
+#scene.s-garden{--grass:#79b056;--grass2:#6aa149;--leaf:#6aa64c;--leaf2:#5a943f;--bed:1;--stripe:.5}
+#scene.s-fall{--sky1:#f1dcc4;--sky2:#f6ece0;--grass:#a5b56b;--grass2:#97a85f;--leaf:#e0913f;--leaf2:#c9672e;--hill:#cdbf8c;--fall:1;--pile:1}
+.leafp{opacity:calc(var(--fall));animation:fall 5s linear infinite}
+@keyframes fall{0%{transform:translate(0,-40px) rotate(0)}100%{transform:translate(40px,420px) rotate(320deg)}}
+
+/* all services */
+.svcs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--ink)}
+.svcs div{padding:24px 22px 26px 0;border-bottom:1px solid var(--line)}
+.svcs div:not(:nth-child(4n+1)){padding-left:22px;border-left:1px solid var(--line)}
+.svcs b{display:block;font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.1;margin-bottom:6px}
+.svcs span{color:var(--soft);font-size:.95rem}
+@media(max-width:900px){.svcs{grid-template-columns:1fr 1fr}.svcs div:not(:nth-child(4n+1)){padding-left:0;border-left:0}.svcs div:nth-child(2n){padding-left:20px;border-left:1px solid var(--line)}}
+
 /* why */
-.why{display:grid;gap:2.4rem;align-items:center}
-@media(min-width:900px){.why{grid-template-columns:1fr 1fr;gap:4rem}}
-.why h2{font-size:clamp(2.4rem,5.4vw,4rem);color:var(--g1)}
-.checks{list-style:none;padding:0;margin:1.6rem 0 0;display:grid;gap:.9rem}
-.checks li{display:flex;gap:.8rem;align-items:flex-start;font-weight:600}
-.checks li::before{content:"\2713";flex:none;width:30px;height:30px;border-radius:50%;background:var(--g4);color:var(--g1);display:grid;place-items:center;font-weight:800}
-.badge{position:relative;aspect-ratio:1;max-width:420px;margin-inline:auto;width:100%}
-.badge svg{width:100%;height:100%}
-.badge .rot{transform-origin:50% 50%;animation:spin 30s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-/* book */
-.bkw{background:var(--g1);color:#eaf5df;border-radius:40px 40px 0 0}
-.bkw .g{display:grid;gap:2.4rem}
-@media(min-width:960px){.bkw .g{grid-template-columns:.85fr 1.15fr;gap:4rem}}
-.bkw h2{font-size:clamp(2.4rem,5.4vw,4rem);color:#fff}
-.card{background:var(--cream);color:var(--ink);border-radius:30px;padding:clamp(1.3rem,3vw,2.2rem)}
-.card .btn.ghost{box-shadow:0 6px 0 var(--line)}
-.addon{display:inline-block;margin-top:1.4rem;background:var(--g4);color:var(--g1);border-radius:999px;padding:.35rem .9rem;font-weight:800;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}
-.where{margin-top:2rem;display:grid;gap:.4rem}
-.where small{color:#a9c99a;font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.74rem}
-.where span{font-weight:700;font-size:1.2rem}
-footer{background:#163f24;color:#a9c99a;padding-block:2.2rem;font-size:.88rem}
-footer .dis{margin-top:.8rem;font-size:.84rem}
+.why{background:var(--ever);color:var(--cream)}
+.wg{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:center}
+.thirty{font-family:var(--serif);font-size:clamp(8rem,20vw,16rem);line-height:.78;color:var(--gold)}
+.thirty small{display:block;font-family:var(--sans);font-size:1rem;letter-spacing:.2em;text-transform:uppercase;color:#b9c8bd;margin-top:22px}
+.why ol{list-style:none;margin:0;padding:0;border-top:1px solid #2f4d45}
+.why li{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid #2f4d45}
+.why li span{font-family:var(--serif);font-size:1.4rem;color:var(--gold)}
+.why li b{display:block;font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.15}
+.why li p{margin:4px 0 0;color:#b9c8bd}
+@media(max-width:860px){.wg{grid-template-columns:1fr;gap:30px}}
+
+/* booking */
+.bk{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:24px;align-items:stretch}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:30px;display:flex;flex-direction:column;gap:22px}
+.lab{font-weight:600;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button,.day,.slot{min-height:48px;padding:0 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font-weight:500;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chips button:hover,.day:hover,.slot:hover{border-color:var(--ever)}
+.chips button[aria-pressed=true],.day[aria-pressed=true],.slot[aria-pressed=true]{background:var(--ever);border-color:var(--ever);color:var(--cream)}
+.days{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.day{border-radius:16px;padding:8px 4px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:62px;line-height:1.15}
+.day small{font-size:.75rem;opacity:.75}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slot:disabled{opacity:.4;text-decoration:line-through;cursor:not-allowed}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld{display:grid;gap:6px;font-weight:600;font-size:.9rem}
+.fld input{width:100%;min-height:52px;border-radius:14px;border:1.5px solid var(--line);background:#fff;padding:12px 14px;font:inherit;font-weight:400}
+.fld input:focus{outline:3px solid #cfe0c6;border-color:var(--ever)}
+.err{color:#a3321c;font-size:.85rem;font-weight:600}
+.demo{font-size:.85rem;color:var(--soft);margin:0}
+.side{background:var(--ever);color:var(--cream);border-radius:28px;padding:30px;display:flex;flex-direction:column}
+.side h3{font-size:1.9rem;margin-bottom:6px}
+.side dl{margin:14px 0 0;flex:1;display:flex;flex-direction:column}
+.side dl div{flex:1;display:flex;flex-direction:column;justify-content:center;padding:12px 0;border-top:1px solid #2f4d45}
+.side dt{font-size:.72rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#9fb3a6}
+.side dd{margin:4px 0 0;font-weight:500}
+.side dd.no{color:#7f958a}
+.side .addon{padding-top:14px;border-top:1px solid #2f4d45;color:#9fb3a6;font-size:.85rem}
+.done{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.done h3{font-size:2.4rem;margin-bottom:10px}
+@media(max-width:980px){.bk{grid-template-columns:1fr}}
+@media(max-width:560px){.panel,.side{padding:20px;border-radius:22px}.days{grid-template-columns:repeat(3,minmax(0,1fr))}.f2{grid-template-columns:1fr}}
+
+footer{background:#10211d;color:#a9b8ae;padding:36px 0 40px;font-size:.88rem}
+footer .r{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-bottom:18px;border-bottom:1px solid #22392f}
+footer b{color:var(--cream)}
+footer .dis{margin:18px 0 0;max-width:74em;font-size:.8rem}
+.mbar{display:none}
+@media(max-width:640px){.mbar{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}.mbar .btn{width:100%;box-shadow:0 12px 26px -8px rgba(0,0,0,.45)}body{padding-bottom:80px}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .js .rv{opacity:1;transform:none}.js .hero h1 .l>span{transform:none}.chap{opacity:1}.cloud{display:none}
+}
 </style>
 </head>
 <body>
-<a class="skip" href="#main" data-go="main">Skip to content</a>
-<header><div class="wrap">
- <a class="brand" href="#top" data-go="top" aria-label="Polanco Bros Landscaping, home"><svg viewBox="0 0 42 42" aria-hidden="true"><rect width="42" height="42" rx="12" fill="#1e5631"/><path d="M6 30c5-7 10-7 15 0 5-7 10-7 15 0v6H6z" fill="#5fa64a"/><circle cx="29" cy="13" r="5" fill="#d9643a"/></svg><span><b>Polanco Bros</b><small>Landscaping &middot; LLC</small></span></a>
- <nav class="main" aria-label="Main"><button type="button" data-go="services">Services</button><button type="button" data-go="why">Why us</button><button type="button" data-go="book">Book an estimate</button></nav>
- <div class="hc"><button class="btn" type="button" data-go="book">Book</button></div>
+<a class="skip" href="#main">Skip to content</a>
+<div class="concept">Website concept by <a href="https://www.lisettecolon.com">Lisette Colon</a>. A sample, not the official Polanco Bros Landscaping site.</div>
+
+<header class="hdr"><div class="wrap">
+ <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#18302a"/><path d="M20 30V16M20 22c-5 0-8-3-8-8 5 0 8 3 8 8zM20 19c4 0 7-3 7-7-4 0-7 3-7 7z" fill="#8fc06a" stroke="#8fc06a" stroke-width="1.2" stroke-linejoin="round"/></svg><span><b>Polanco Bros</b><small>Landscaping · LLC</small></span></a>
+ <nav class="nav" id="nav" aria-label="Main"><a href="#seasons">The year</a><a href="#services">Services</a><a href="#why">Why us</a><a href="#book">Book</a></nav>
+ <a class="btn btn-t" href="#book">Book a free estimate</a>
+ <button class="menu" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
 </div></header>
+
 <main id="main" tabindex="-1">
-<section class="hero" id="top">
- <div class="wrap hin">
-  <h1 class="rv" style="--d:1;margin-top:1rem">Your yard, <span>handled.</span></h1>
-  <p class="rv" style="--d:2">Landscape design, lawn care, clean-ups, garden installs and more, from the Polanco brothers of South Hempstead.</p>
-<span class="chip rv"><i></i>Nassau &amp; Suffolk &middot; 30+ years</span>
-  <div class="cta rv" style="--d:3"><button class="btn" type="button" data-go="book">Book a free estimate</button><button class="btn ghost" type="button" data-go="services">What we do</button></div>
- </div>
- <div class="scape" aria-hidden="true">
-  <span class="sun"></span>
-  <svg class="layer" data-sp=".05" viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0 230 C220 150 420 170 640 210 S1080 140 1440 200 V400 H0z" fill="#a8d36a"/></svg>
-  <svg class="layer" data-sp=".12" viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0 290 C260 220 520 250 760 280 S1200 230 1440 270 V400 H0z" fill="#5fa64a"/><g fill="#2f7a3f"><circle cx="210" cy="250" r="34"/><circle cx="250" cy="240" r="40"/><circle cx="292" cy="252" r="30"/><circle cx="1140" cy="236" r="38"/><circle cx="1182" cy="228" r="44"/><circle cx="1226" cy="242" r="32"/></g></svg>
-  <svg class="layer" data-sp=".2" viewBox="0 0 1440 400" preserveAspectRatio="none"><path d="M0 340 C300 300 600 320 900 336 S1300 310 1440 330 V400 H0z" fill="#2f7a3f"/><g stroke="#1e5631" stroke-width="10" opacity=".35"><path d="M0 372 H1440"/></g><g fill="#1e5631"><rect x="560" y="300" width="160" height="44" rx="22"/><rect x="740" y="306" width="120" height="38" rx="19"/></g></svg>
- </div>
+<section class="hero" id="top" style="padding:0">
+ <div class="sky"></div>
+ <div class="sun" data-par=".25"></div>
+ <div class="cloud" style="top:16%;width:120px;animation-duration:90s;animation-delay:-20s"></div>
+ <div class="cloud" style="top:28%;width:80px;animation-duration:120s;animation-delay:-70s"></div>
+ <div class="layer" data-par=".18"><svg viewBox="0 0 1440 420" preserveAspectRatio="none" style="height:46vh;width:100%"><path d="M0 220 C 220 120, 420 160, 620 140 S 1020 70, 1440 150 V420 H0Z" fill="#c9cfa4"/></svg></div>
+ <div class="layer" data-par=".1"><svg viewBox="0 0 1440 360" preserveAspectRatio="none" style="height:38vh;width:100%"><path d="M0 200 C 260 110, 520 230, 760 170 S 1180 120, 1440 190 V360 H0Z" fill="#9fb98a"/>
+  <g fill="#6f9460"><circle cx="160" cy="150" r="46"/><circle cx="210" cy="160" r="36"/><circle cx="1220" cy="140" r="52"/><circle cx="1280" cy="156" r="38"/></g><g fill="#5b3f2c"><rect x="182" y="180" width="8" height="40"/><rect x="1246" y="180" width="9" height="40"/></g></svg></div>
+ <div class="layer" data-par=".05"><svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" style="height:30vh;width:100%">
+  <g transform="translate(860 40)"><rect x="0" y="70" width="300" height="130" fill="#f3ead9"/><path d="M-20 76 L150 0 L320 76Z" fill="#8a4f36"/><rect x="128" y="120" width="44" height="80" fill="#3f5a4f"/><rect x="34" y="104" width="54" height="44" fill="#cfe1ea" stroke="#fff" stroke-width="5"/><rect x="212" y="104" width="54" height="44" fill="#cfe1ea" stroke="#fff" stroke-width="5"/></g>
+  <path d="M0 240 C 300 200, 700 236, 1440 210 V300 H0Z" fill="#7aa75a"/>
+  <g fill="#5e8c48"><rect x="850" y="214" width="330" height="34" rx="17"/></g>
+  <g fill="#e0913f"><circle cx="880" cy="214" r="6"/><circle cx="930" cy="210" r="6"/><circle cx="1090" cy="210" r="6"/><circle cx="1150" cy="214" r="6"/></g></svg></div>
+ <div class="layer" data-par="0"><svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="height:12vh;width:100%"><path d="M0 40 C 400 10, 1000 30, 1440 14 V120 H0Z" fill="#5f9a42"/><g opacity=".18" fill="#fff"><path d="M0 70 L1440 50 V62 L0 84Z"/><path d="M0 100 L1440 84 V96 L0 114Z"/></g></svg></div>
+ <div class="copy"><div class="wrap">
+  <h1><span class="l"><span style="--i:0">Your yard,</span></span><span class="l"><span style="--i:1">handled.</span></span></h1>
+  <p class="lead rv" style="--d:3">Landscape design, lawn care, clean-ups, garden installs and more, from the Polanco brothers of South Hempstead. Serving Nassau and Suffolk for over 30 years.</p>
+  <div class="rv" style="--d:4"><a class="btn btn-e" href="#book">Book a free estimate</a><span class="meta">4.8 on HomeAdvisor</span></div>
+ </div></div>
 </section>
-<section class="stats" aria-label="At a glance"><div class="wrap"><ul>
- <li class="rv"><b><span data-n="30">30</span>+</b><small>years of experience</small></li>
- <li class="rv" style="--d:1"><b><span data-n="4.8" data-dec="1">4.8</span></b><small>HomeAdvisor rating</small></li>
- <li class="rv" style="--d:2"><b><span data-n="25">25</span></b><small>verified reviews</small></li>
- <li class="rv" style="--d:3"><b>2</b><small>counties: Nassau &amp; Suffolk</small></li>
-</ul></div></section>
-
-<section class="sec" id="services" tabindex="-1"><div class="wrap">
- <div class="hd"><span class="chip"><i></i>Services</span><h2 class="rv">One crew for the whole yard.</h2><p class="rv" style="--d:1">From a weekly mow to a full landscape design.</p></div>
- <div class="tiles">
-  <div class="tile t1 rv"><svg viewBox="0 0 100 100"><path d="M50 90V40M50 40c0-18 14-28 30-28-2 18-14 28-30 28zM50 56c0-14-10-22-24-22 2 14 10 22 24 22z" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".5"/></svg><h3>Landscape design</h3><p>Beds, shrubs and plans that fit the house.</p></div>
-  <div class="tile t2 rv" style="--d:1"><svg viewBox="0 0 100 100"><path d="M10 80h80M20 80V60h40v20M60 66l20-30" stroke="#fff" stroke-width="5" fill="none" opacity=".5"/></svg><h3>Lawn care &amp; mowing</h3><p>Kept sharp all season.</p></div>
-  <div class="tile t3 rv" style="--d:2"><svg viewBox="0 0 100 100"><path d="M30 30l40 40M70 30L30 70M20 85h60" stroke="#fff" stroke-width="5" fill="none" opacity=".4"/></svg><h3>Yard clean-ups</h3><p>Spring and fall, leaves and debris gone.</p></div>
-  <div class="tile t4 rv" style="--d:3"><svg viewBox="0 0 100 100"><circle cx="50" cy="40" r="16" stroke="#fff" stroke-width="5" fill="none" opacity=".5"/><path d="M50 56v30" stroke="#fff" stroke-width="5" opacity=".5"/></svg><h3>Garden installation</h3><p>New gardens, planted and mulched.</p></div>
-  <div class="tile t5 rv"><svg viewBox="0 0 100 100"><path d="M20 20c20 10 40 10 60 0M20 40c20 10 40 10 60 0M20 60c20 10 40 10 60 0" stroke="#fff" stroke-width="5" fill="none" opacity=".45"/></svg><h3>Power washing</h3><p>Patios, walks and siding cleaned.</p></div>
-  <div class="tile t6 rv" style="--d:1"><svg viewBox="0 0 100 100"><rect x="15" y="50" width="50" height="25" rx="4" stroke="#fff" stroke-width="5" fill="none" opacity=".45"/><path d="M65 60l20-20" stroke="#fff" stroke-width="5" opacity=".45"/></svg><h3>Bobcat service</h3><p>Grading, digging and heavy moving.</p></div>
-  <div class="tile t7 rv" style="--d:2"><svg viewBox="0 0 100 100"><path d="M15 85V35M38 85V35M62 85V35M85 85V35M10 50h80M10 70h80" stroke="#fff" stroke-width="5" opacity=".45"/></svg><h3>Fences</h3><p>New fences and repairs.</p></div>
-  <div class="tile t8 rv" style="--d:3"><svg viewBox="0 0 100 100"><path d="M50 90V55M30 60l20-40 20 40z" stroke="#fff" stroke-width="5" fill="none" opacity=".45"/></svg><h3>Tree service</h3><p>Trimming and removal.</p></div>
- </div>
-</div></section>
-
-<section class="sec" id="why" tabindex="-1" style="padding-top:0"><div class="wrap why">
- <div>
-  <span class="chip"><i></i>Why Polanco Bros</span>
-  <h2 class="rv" style="margin-top:1rem">Thirty years of Long Island yards.</h2>
-  <ul class="checks rv" style="--d:1">
-   <li>Serving Nassau and Suffolk counties for over 30 years</li>
-   <li>The owners keep you informed about your project, start to finish</li>
-   <li>Approved on HomeAdvisor, rated 4.8 by 25 homeowners</li>
-   <li>Free estimates, booked online in a minute</li>
-  </ul>
- </div>
- <div class="badge rv" style="--d:1" aria-hidden="true"><svg viewBox="0 0 300 300"><defs><path id="cp" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"/></defs><circle cx="150" cy="150" r="140" fill="#1e5631"/><g class="rot"><text font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="19" letter-spacing="5" fill="#a8d36a"><textPath href="#cp">POLANCO BROS &#183; LANDSCAPING &#183; NASSAU &amp; SUFFOLK &#183; </textPath></text></g><circle cx="150" cy="150" r="80" fill="#fbf6ea"/><text x="150" y="150" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="58" fill="#1e5631">30+</text><text x="150" y="182" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="16" fill="#d9643a">YEARS</text></svg></div>
-</div></section>
-
-<section class="sec bkw" id="book" tabindex="-1"><div class="wrap g">
- <div>
-  <span class="chip" style="background:#2b6a3c;border-color:#2b6a3c;color:#eaf5df"><i></i>Free estimate</span>
-  <h2 class="rv" style="margin-top:1rem">Book your estimate. Skip the phone tag.</h2>
-  <p class="rv" style="--d:1;color:#c7e0b9;max-width:40ch;margin-top:1.2rem">Pick what you need, a day and a time. A text confirms it.</p>
-  <span class="addon">Add-on shown: online booking</span>
-  <div class="where"><small>Based in</small><span>South Hempstead, NY</span><small style="margin-top:.8rem">Serving</small><span>Nassau &amp; Suffolk counties</span></div>
- </div>
- <div class="card rv" style="--d:1"><div class="bk" id="bk" data-slots="8:00 AM,10:00 AM,12:00 PM,2:00 PM,4:00 PM">
- <div class="bkmain">
-  <label>What do you need?<select id="bkSvc"><option>Landscape design</option><option>Lawn care & mowing</option><option>Yard clean-up</option><option>Garden installation</option><option>Power washing</option><option>Bobcat work</option></select></label>
-  <div><h4>1. Pick a day</h4><div class="days"></div></div>
-  <div><h4>2. Pick a time</h4><div class="slots"></div></div>
-  <p class="sum" aria-live="polite"></p>
-  <form novalidate>
-   <div class="two"><label>Name<input autocomplete="name" required><span class="err" hidden>Please enter your name.</span></label>
-   <label>Phone<input type="tel" inputmode="tel" autocomplete="tel" required><span class="err" hidden>Please enter a phone number.</span></label></div>
-   <label style="margin-top:.8rem">Street address<input autocomplete="street-address"></label>
-   <p class="err bkerr" hidden></p>
-   <button class="btn" type="submit" style="margin-top:1rem">Book my estimate</button>
-   <p class="demo-note"><b>Demo booking.</b> This is a website concept. Nothing is sent or saved, and no estimate is booked.</p>
-  </form>
- </div>
- <div id="bkOk" hidden tabindex="-1"><h3 style="margin:0 0 .4rem">Demo complete.</h3><p id="bkWhen" style="font-weight:700"></p><p>On the real site this booking would go straight to the owner's calendar and send you a text to confirm. Nothing was sent or saved.</p><button class="btn ghost" type="button" id="bkAgain">Start over</button></div>
+<div class="stats"><div class="wrap">
+ <div><b>30+</b><span>Years of experience</span></div>
+ <div><b>4.8</b><span>HomeAdvisor rating</span></div>
+ <div><b>25</b><span>Verified reviews</span></div>
+ <div><b>2</b><span>Counties: Nassau &amp; Suffolk</span></div>
 </div></div>
+
+<section class="seasons" id="seasons" tabindex="-1"><div class="wrap">
+ <div class="head">
+  <div class="rv"><p class="kick">The year in your yard</p><h2>One crew, every season.</h2></div>
+  <p class="rv" style="--d:1">Scroll through the year and watch the yard change. Each season shows what Polanco Bros takes care of.</p>
+ </div>
+ <div class="sg">
+  <div class="stage" aria-hidden="true">
+   <svg id="scene" class="s-spring" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice">
+    <defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="t" style="stop-color:var(--sky1)"/><stop offset="1" class="t" style="stop-color:var(--sky2)"/></linearGradient></defs>
+    <rect width="800" height="600" fill="url(#sk)"/>
+    <circle cx="640" cy="110" r="46" fill="#fff4d6" opacity=".9"/>
+    <path class="t" d="M0 330 C 200 250, 420 300, 600 270 S 760 250, 800 270 V600 H0Z" style="fill:var(--hill)"/>
+    <!-- house -->
+    <g><rect x="430" y="270" width="250" height="170" fill="#f3ead9"/><path d="M410 278 L555 190 L700 278Z" fill="#8a4f36"/><rect x="535" y="350" width="42" height="90" fill="#3f5a4f"/><rect x="460" y="310" width="50" height="44" fill="#cfe1ea" stroke="#fff" stroke-width="5"/><rect x="605" y="310" width="50" height="44" fill="#cfe1ea" stroke="#fff" stroke-width="5"/></g>
+    <!-- lawn -->
+    <rect class="t" x="0" y="430" width="800" height="170" style="fill:var(--grass)"/>
+    <g class="t" style="opacity:var(--stripe)"><path d="M0 470 H800 V500 H0Z M0 530 H800 V560 H0Z" style="fill:var(--grass2)"/></g>
+    <path d="M536 440 L578 440 L640 600 L470 600Z" fill="#e3d8c2"/>
+    <!-- hedge -->
+    <rect class="t" x="430" y="418" width="96" height="30" rx="15" style="fill:var(--leaf2)"/><rect class="t" x="590" y="418" width="92" height="30" rx="15" style="fill:var(--leaf2)"/>
+    <!-- tree -->
+    <rect x="186" y="300" width="20" height="160" fill="#5b3f2c"/>
+    <g class="t"><circle cx="196" cy="250" r="86" style="fill:var(--leaf)"/><circle cx="140" cy="290" r="54" style="fill:var(--leaf2)"/><circle cx="256" cy="286" r="58" style="fill:var(--leaf2)"/><circle cx="200" cy="200" r="56" style="fill:var(--leaf)"/></g>
+    <g class="t" style="opacity:var(--bloom)" fill="#f2b8c6"><circle cx="160" cy="230" r="7"/><circle cx="220" cy="210" r="6"/><circle cx="250" cy="260" r="7"/><circle cx="180" cy="290" r="6"/><circle cx="130" cy="270" r="5"/><circle cx="210" cy="250" r="5"/><circle cx="270" cy="300" r="6"/></g>
+    <!-- garden bed -->
+    <g class="t" style="opacity:var(--bed)"><ellipse cx="330" cy="480" rx="110" ry="26" fill="#6b4a33"/>
+     <g fill="#3f7a3a"><circle cx="270" cy="466" r="16"/><circle cx="310" cy="458" r="20"/><circle cx="355" cy="462" r="17"/><circle cx="392" cy="470" r="13"/></g>
+     <g fill="#e2b04a"><circle cx="300" cy="448" r="5"/><circle cx="352" cy="450" r="5"/></g><g fill="#c8643b"><circle cx="275" cy="456" r="4"/><circle cx="390" cy="462" r="4"/></g></g>
+    <!-- spring flowers -->
+    <g class="t" style="opacity:var(--bloom)"><g fill="#f6d06a"><circle cx="70" cy="470" r="6"/><circle cx="100" cy="482" r="6"/><circle cx="740" cy="472" r="6"/></g><g fill="#e98fa5"><circle cx="86" cy="462" r="6"/><circle cx="720" cy="484" r="6"/><circle cx="760" cy="462" r="6"/></g></g>
+    <!-- fall pile & leaves -->
+    <g class="t" style="opacity:var(--pile)"><ellipse cx="300" cy="500" rx="60" ry="16" fill="#c9672e"/><ellipse cx="290" cy="492" rx="40" ry="12" fill="#e0913f"/><path d="M372 420 L392 508" stroke="#5b3f2c" stroke-width="4"/><path d="M380 504 L404 512 L398 520 L374 512Z" fill="#7d6a52"/></g>
+    <g class="t" style="opacity:var(--fall)">
+     <path class="leafp" d="M150 200 q6 -8 12 0 q-6 8 -12 0z" fill="#e0913f" style="animation-delay:-1s"/>
+     <path class="leafp" d="M230 180 q6 -8 12 0 q-6 8 -12 0z" fill="#c9672e" style="animation-delay:-2.6s"/>
+     <path class="leafp" d="M190 230 q6 -8 12 0 q-6 8 -12 0z" fill="#e2b04a" style="animation-delay:-3.8s"/>
+     <path class="leafp" d="M260 250 q6 -8 12 0 q-6 8 -12 0z" fill="#e0913f" style="animation-delay:-.4s"/>
+     <path class="leafp" d="M120 260 q6 -8 12 0 q-6 8 -12 0z" fill="#c9672e" style="animation-delay:-4.6s"/>
+    </g>
+   </svg>
+   <span class="tag"><i></i><span id="sname">Spring</span></span>
+  </div>
+  <div>
+   <article class="chap cur" data-s="s-spring" data-n="Spring"><span class="n">01 · Spring</span><h3>Spring clean-up.</h3><p>Leaves, branches and winter debris cleared out, beds edged, and the yard ready for the season.</p><ul><li>Yard clean-ups</li><li>Tree trimming</li></ul></article>
+   <article class="chap" data-s="s-summer" data-n="Summer"><span class="n">02 · Summer</span><h3>Lawn care, all season.</h3><p>Regular mowing and care that keeps the lawn sharp from the first cut to the last.</p><ul><li>Lawn care &amp; mowing</li><li>Power washing</li></ul></article>
+   <article class="chap" data-s="s-garden" data-n="Design"><span class="n">03 · Any time</span><h3>New gardens and designs.</h3><p>Beds, shrubs and plans that fit the house, planted and mulched. Bobcat grading when the yard needs reshaping.</p><ul><li>Landscape design</li><li>Garden installation</li><li>Bobcat service</li><li>Fences</li></ul></article>
+   <article class="chap" data-s="s-fall" data-n="Fall"><span class="n">04 · Fall</span><h3>Fall clean-up.</h3><p>Leaves gone and the yard put to bed before winter, plus tree work while it's easy to see the branches.</p><ul><li>Yard clean-ups</li><li>Tree service</li></ul></article>
+  </div>
+ </div>
+</div></section>
+
+<section id="services" tabindex="-1" style="padding-top:64px"><div class="wrap">
+ <div class="head">
+  <div class="rv"><p class="kick">Services</p><h2>Everything the yard needs.</h2></div>
+  <p class="rv" style="--d:1">From a weekly mow to a full landscape design, one crew handles the whole yard.</p>
+ </div>
+ <div class="svcs rv">
+  <div><b>Landscape design</b><span>Beds, shrubs and plans that fit the house.</span></div>
+  <div><b>Lawn care &amp; mowing</b><span>Kept sharp all season.</span></div>
+  <div><b>Yard clean-ups</b><span>Spring and fall, leaves and debris gone.</span></div>
+  <div><b>Garden installation</b><span>New gardens, planted and mulched.</span></div>
+  <div><b>Power washing</b><span>Patios, walks and siding cleaned.</span></div>
+  <div><b>Bobcat service</b><span>Grading, digging and heavy moving.</span></div>
+  <div><b>Fences</b><span>New fences and repairs.</span></div>
+  <div><b>Tree service</b><span>Trimming and removal.</span></div>
+ </div>
+</div></section>
+
+<section class="why" id="why" tabindex="-1"><div class="wrap wg">
+ <div class="thirty rv">30+<small>Years of Long Island yards</small></div>
+ <div class="rv" style="--d:1">
+  <p class="kick">Why Polanco Bros</p>
+  <ol>
+   <li><span>01</span><div><b>Over 30 years in Nassau and Suffolk</b><p>Long Island yards are what they know.</p></div></li>
+   <li><span>02</span><div><b>The owners keep you informed</b><p>From the first visit to the last pass of the mower.</p></div></li>
+   <li><span>03</span><div><b>Approved on HomeAdvisor, rated 4.8</b><p>From 25 verified homeowner reviews.</p></div></li>
+   <li><span>04</span><div><b>Free estimates, booked online</b><p>Pick a day right on this page.</p></div></li>
+  </ol>
+ </div>
+</div></section>
+
+<section id="book" tabindex="-1"><div class="wrap">
+ <div class="head">
+  <div class="rv"><p class="kick">Free estimate</p><h2>Book your estimate. Skip the phone tag.</h2></div>
+  <p class="rv" style="--d:1">Pick what you need, a day and a time. A text confirms it.</p>
+ </div>
+ <div class="bk">
+  <div class="panel rv" id="panel">
+   <form id="form" novalidate style="display:flex;flex-direction:column;gap:22px">
+    <div><p class="lab">What do you need?</p><div class="chips" id="svc"></div></div>
+    <div><p class="lab">Pick a day</p><div class="days" id="days"></div></div>
+    <div><p class="lab">Pick a time</p><div class="slots" id="slots"></div></div>
+    <div class="f2">
+     <label class="fld">Name<input id="f-name" autocomplete="name" required><span class="err" hidden>Please add your name.</span></label>
+     <label class="fld">Mobile number<input id="f-phone" type="tel" inputmode="tel" autocomplete="tel" required><span class="err" hidden>Please add a mobile number.</span></label>
+    </div>
+    <button class="btn btn-t" type="submit" style="width:100%">Book my free estimate</button>
+    <p class="demo"><b>Demo booking.</b> Days and times are made up for this concept. Nothing is booked, sent or saved.</p>
+   </form>
+   <div class="done" id="done" hidden tabindex="-1"><h3>Demo complete.</h3><p>On the real site Polanco Bros would get this right away, and you'd get a text confirming the visit. Nothing was booked, sent or saved.</p><button class="btn btn-l" type="button" id="again">Book another</button></div>
+  </div>
+  <aside class="side rv" style="--d:1" aria-live="polite">
+   <h3>Your estimate</h3>
+   <dl>
+    <div><dt>For</dt><dd id="o-svc" class="no">Pick a service</dd></div>
+    <div><dt>Day</dt><dd id="o-day" class="no">Pick a day</dd></div>
+    <div><dt>Time</dt><dd id="o-time" class="no">Pick a time</dd></div>
+    <div><dt>Based in</dt><dd>South Hempstead, NY</dd></div>
+    <div><dt>Serving</dt><dd>Nassau &amp; Suffolk counties</dd></div>
+   </dl>
+   <p class="addon">Add-on shown: online booking</p>
+  </aside>
+ </div>
 </div></section>
 </main>
-<footer><div class="wrap"><span>Polanco Bros Landscaping, LLC &middot; South Hempstead, NY</span>
- <p class="dis">Independent website concept. Not affiliated with or approved by Polanco Bros Landscaping, LLC. Business details and rating are from HomeAdvisor, checked October 8, 2026. Illustrations are placeholders until real job photos are added.</p></div></footer>
-<dialog class="lbx" id="lbx" aria-label="Photo viewer"><img id="lbxI" alt=""><p id="lbxC"></p><div class="lbb"><button type="button" id="lbxP" aria-label="Previous photo">&larr;</button><button type="button" id="lbxX">Close</button><button type="button" id="lbxN" aria-label="Next photo">&rarr;</button></div></dialog>
+
+<footer><div class="wrap">
+ <div class="r"><span><b>Polanco Bros Landscaping, LLC</b> · South Hempstead, NY</span><span>Nassau &amp; Suffolk · 30+ years</span></div>
+ <p class="dis">Independent website concept. Not affiliated with or approved by Polanco Bros Landscaping, LLC. Business details and rating are from HomeAdvisor, checked October 8, 2026. Illustrations are placeholders until real job photos are added.</p>
+</div></footer>
+<div class="mbar"><a class="btn btn-t" href="#book">Book a free estimate</a></div>
+
 <script>
 (function(){
-"use strict";
-var d=document,$=function(s,r){return (r||d).querySelector(s)},$$=function(s,r){return [].slice.call((r||d).querySelectorAll(s))};
-d.documentElement.classList.add("js");
-var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
-window.__site={$:$,$$:$$,RM:RM};
-function go(id){var el=d.getElementById(id);if(!el)return;var hd=$("header");var off=(hd&&getComputedStyle(hd).position!=="static")?hd.offsetHeight+8:0;var y=el.getBoundingClientRect().top+pageYOffset-(id==="top"?0:off);scrollTo({top:y,behavior:RM?"auto":"smooth"});try{el.focus({preventScroll:true})}catch(e){}}
-window.__site.go=go;
-/* lightbox */
-var lb=$("#lbx"),G=[],cur=0;
-function lbShow(i){if(!G.length)return;cur=(i+G.length)%G.length;$("#lbxI").src=G[cur].src;$("#lbxI").alt=G[cur].alt;$("#lbxC").textContent=(G[cur].getAttribute("data-cap")||G[cur].alt)+" · "+(cur+1)+" of "+G.length;}
-d.addEventListener("click",function(e){
-  var g=e.target.closest("[data-go]");if(g){e.preventDefault();go(g.getAttribute("data-go"));var nv=$("#menu");if(nv&&nv.classList.contains("open")){nv.classList.remove("open");var mb=$("#menuBtn");if(mb)mb.setAttribute("aria-expanded","false");}return;}
-  var t=e.target.closest("[data-lb]");if(t&&lb){var grp=t.closest("[data-lbgroup]")||d;G=$$("[data-lb] img",grp).filter(function(i){return !i.closest("[hidden]")});var im=$("img",t);lbShow(G.indexOf(im));lb.showModal?lb.showModal():lb.setAttribute("open","");return;}
-  var mb=e.target.closest("#menuBtn");if(mb){var nv=$("#menu");var o=nv.classList.toggle("open");mb.setAttribute("aria-expanded",o);}
-});
-if(lb){$("#lbxX").addEventListener("click",function(){lb.close?lb.close():lb.removeAttribute("open")});$("#lbxP").addEventListener("click",function(){lbShow(cur-1)});$("#lbxN").addEventListener("click",function(){lbShow(cur+1)});lb.addEventListener("keydown",function(e){if(e.key==="ArrowLeft")lbShow(cur-1);if(e.key==="ArrowRight")lbShow(cur+1)});lb.addEventListener("click",function(e){if(e.target===lb&&lb.close)lb.close()});}
-/* demo forms */
-$$("form[data-demo]").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();var bad=null;$$("[required]",f).forEach(function(i){var ok=!!i.value.trim();var er=i.parentNode.querySelector(".err");if(er)er.hidden=ok;i.setAttribute("aria-invalid",!ok);if(!ok&&!bad)bad=i;});if(bad){bad.focus();return;}var ok=d.getElementById(f.getAttribute("data-demo"));f.hidden=true;ok.hidden=false;ok.focus();});});
-$$("[data-again]").forEach(function(b){b.addEventListener("click",function(){var f=d.getElementById(b.getAttribute("data-again"));f.reset();f.hidden=false;b.closest("[tabindex]").hidden=true;});});
-/* count up */
-function count(el){var to=parseFloat(el.getAttribute("data-n")),dec=+(el.getAttribute("data-dec")||0);if(RM){el.textContent=to.toFixed(dec);return;}var t0=null;function s(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/1500);k=1-Math.pow(1-k,3);el.textContent=(to*k).toFixed(dec);if(k<1)requestAnimationFrame(s);}requestAnimationFrame(s);}
-var pend=$$(".rv"),cn=$$("[data-n]"),pars=RM?[]:$$("[data-par]");
-function tick(){var vh=innerHeight;
-  pend=pend.filter(function(el){if(el.closest("[hidden]"))return true;var r=el.getBoundingClientRect();if(r.top<vh*.92&&r.bottom>-50){el.classList.add("in");return false;}return true;});
-  cn=cn.filter(function(el){var r=el.getBoundingClientRect();if(r.top<vh*.9&&r.bottom>0){count(el);return false;}return true;});
-  pars.forEach(function(el){var r=el.parentNode.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;var k=((r.top+r.height/2)-vh/2)/vh;el.style.transform="translate3d(0,"+(k*parseFloat(el.getAttribute("data-par"))*r.height).toFixed(1)+"px,0) scale(1.12)";});
-  if(window.__site.onTick)window.__site.onTick(vh);}
-window.__site.tick=tick;
-var tk=false;function on(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;tick();});}
-addEventListener("scroll",on,{passive:true});addEventListener("resize",on);
-setTimeout(tick,30);setTimeout(tick,400);setTimeout(tick,1200);
-/* booking */
-var bk=$("#bk");
-if(bk){var dsEl=$(".days",bk),slEl=$(".slots",bk),selD=null,selT=null;var N=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-  var base=new Date();base.setHours(0,0,0,0);var days=[];for(var i=1;i<=14;i++){var x=new Date(base);x.setDate(base.getDate()+i);days.push(x);}
-  dsEl.innerHTML=days.map(function(x,i){var off=x.getDay()===0;return '<button type="button" data-i="'+i+'"'+(off?' disabled aria-label="'+N[x.getDay()]+' '+M[x.getMonth()]+' '+x.getDate()+', closed"':' aria-label="'+N[x.getDay()]+' '+M[x.getMonth()]+' '+x.getDate()+'"')+' aria-pressed="false"><small>'+N[x.getDay()]+'</small><b>'+x.getDate()+'</b></button>';}).join("");
-  var SL=(bk.getAttribute("data-slots")||"8:00 AM,10:00 AM,12:00 PM,2:00 PM,4:00 PM").split(",");
-  function slots(i){var seed=(days[i].getDate()*7)%SL.length;slEl.innerHTML=SL.map(function(s,k){var taken=(k===seed)||(days[i].getDay()===6&&k>=SL.length-2);return '<button type="button" data-t="'+k+'" aria-pressed="false"'+(taken?' disabled aria-label="'+s+', booked"':'')+'>'+s+'</button>';}).join("");selT=null;sum();}
-  function sum(){var s=$(".sum",bk);var sv=$("#bkSvc",bk);if(selD===null){s.textContent="Pick a day to see open times.";return;}var x=days[selD];s.textContent=(sv?sv.value+" · ":"")+N[x.getDay()]+", "+M[x.getMonth()]+" "+x.getDate()+(selT!==null?" at "+SL[selT]:" · pick a time");}
-  bk.addEventListener("click",function(e){var b=e.target.closest(".days button");if(b&&!b.disabled){$$(".days button",bk).forEach(function(o){o.setAttribute("aria-pressed",o===b)});selD=+b.getAttribute("data-i");slots(selD);return;}var t=e.target.closest(".slots button");if(t&&!t.disabled){$$(".slots button",bk).forEach(function(o){o.setAttribute("aria-pressed",o===t)});selT=+t.getAttribute("data-t");sum();}});
-  var sv=$("#bkSvc",bk);if(sv)sv.addEventListener("change",sum);
-  $("form",bk).addEventListener("submit",function(e){e.preventDefault();var er=$(".bkerr",bk);if(selD===null||selT===null){er.hidden=false;er.textContent="Pick a day and a time first.";return;}er.hidden=true;var bad=null;$$("[required]",this).forEach(function(i){var ok=!!i.value.trim();var r=i.parentNode.querySelector(".err");if(r)r.hidden=ok;if(!ok&&!bad)bad=i;});if(bad){bad.focus();return;}$("#bkWhen").textContent=$(".sum",bk).textContent;$(".bkmain",bk).hidden=true;$("#bkOk").hidden=false;$("#bkOk").focus();});
-  $("#bkAgain").addEventListener("click",function(){$("form",bk).reset();selD=null;selT=null;$$(".days button",bk).forEach(function(o){o.setAttribute("aria-pressed","false")});slEl.innerHTML="";sum();$(".bkmain",bk).hidden=false;$("#bkOk").hidden=true;});
-  sum();}
-$$("[data-src-from]").forEach(function(i){var s=d.getElementById(i.getAttribute("data-src-from"));if(s)i.src=s.src;});
-/* admin profile demo */
-var adm=$("#adm");
-if(adm){var pk=null;var gal=d.getElementById(adm.getAttribute("data-gal"));
-  adm.addEventListener("click",function(e){var b=e.target.closest(".pick button");if(b){$$(".pick button",adm).forEach(function(o){o.setAttribute("aria-pressed",o===b)});pk=b;}});
-  $("#admPub").addEventListener("click",function(){var ti=$("#admTitle"),er=$("#admErr");if(!pk||!ti.value.trim()){er.hidden=false;er.textContent=!pk?"Pick a photo first.":"Give the project a name.";return;}er.hidden=true;var tpl=gal.querySelector("[data-tpl]")||gal.firstElementChild;var n=tpl.cloneNode(true);n.removeAttribute("data-tpl");n.hidden=false;var im=n.querySelector("img");im.src=pk.querySelector("img").src;im.alt=ti.value.trim();im.setAttribute("data-cap",ti.value.trim());var cap=n.querySelector("[data-capt]");if(cap)cap.textContent=ti.value.trim();var nw=n.querySelector("[data-new]");if(nw)nw.hidden=false;n.classList.add("in");gal.insertBefore(n,gal.firstChild);n.classList.add("flash");ti.value="";$("#admOk").hidden=false;setTimeout(function(){go(gal.id)},200);});
-  var nt=$("#admNotice");if(nt)nt.addEventListener("input",function(){$$("[data-notice]").forEach(function(x){x.textContent=nt.value||x.getAttribute("data-notice")})});}
-/* review feed demo */
-var rf=$("#rfeed");
-if(rf&&!RM){var cards=$$(".rc",rf),k=0;setInterval(function(){var c=cards[k%cards.length];rf.insertBefore(c,rf.firstChild);c.classList.remove("in");void c.offsetWidth;c.classList.add("arrive");setTimeout(function(){c.classList.remove("arrive")},1200);k++;},3200);}
+var d=document,$=function(s,r){return(r||d).querySelector(s)},$$=function(s,r){return[].slice.call((r||d).querySelectorAll(s))};
+var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var mb=$(".menu"),nav=$("#nav");mb.addEventListener("click",function(){var o=nav.classList.toggle("open");mb.setAttribute("aria-expanded",o);mb.textContent=o?"Close":"Menu"});
+$$("#nav a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("open");mb.setAttribute("aria-expanded",false);mb.textContent="Menu"})});
+var hero=$(".hero");setTimeout(function(){hero.classList.add("go")},60);
+/* parallax + seasons */
+var par=$$("[data-par]"),chaps=$$(".chap"),scene=$("#scene"),cur="s-spring";
+function onScroll(){var y=scrollY;if(!RM&&y<innerHeight*1.2)par.forEach(function(e){e.style.transform="translateY("+(y*+e.getAttribute("data-par"))+"px)"});
+ var mid=innerHeight*(innerWidth<900?.72:.55),best=chaps[0];chaps.forEach(function(c){if(c.getBoundingClientRect().top<mid)best=c;});
+ var s=best.getAttribute("data-s");if(s!==cur){cur=s;scene.setAttribute("class",s);$("#sname").textContent=best.getAttribute("data-n");}
+ chaps.forEach(function(c){c.classList.toggle("cur",c===best)});}
+var tk=false;addEventListener("scroll",function(){if(!tk){tk=true;requestAnimationFrame(function(){onScroll();tk=false})}},{passive:true});onScroll();
+/* reveals */
+var io=("IntersectionObserver" in window&&!RM)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{rootMargin:"0px 0px -12% 0px"}):null;
+$$(".rv").forEach(function(e){io?io.observe(e):e.classList.add("in")});
+/* booking (demo) */
+var SV=["Landscape design","Lawn care & mowing","Yard clean-up","Garden installation","Power washing","Bobcat service","Fences","Tree service"],st={svc:null,day:null,time:null};
+var sv=$("#svc");SV.forEach(function(s){var b=d.createElement("button");b.type="button";b.textContent=s;b.setAttribute("aria-pressed","false");b.addEventListener("click",function(){st.svc=s;$$("button",sv).forEach(function(o){o.setAttribute("aria-pressed",o===b)});out();});sv.appendChild(b);});
+var DN=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],MN=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],list=[],dt=new Date();dt.setHours(12);
+while(list.length<12){dt.setDate(dt.getDate()+1);if(dt.getDay()!==0)list.push(new Date(dt));}
+var dg=$("#days");list.forEach(function(x,i){var b=d.createElement("button");b.type="button";b.className="day";b.innerHTML=DN[x.getDay()]+"<small>"+MN[x.getMonth()]+" "+x.getDate()+"</small>";b.setAttribute("aria-pressed","false");b.addEventListener("click",function(){st.day=i;st.time=null;$$(".day",dg).forEach(function(o){o.setAttribute("aria-pressed",o===b)});slots();out();});dg.appendChild(b);});
+var SL=["8:00 AM","10:00 AM","12:00 PM","2:00 PM","4:00 PM"];
+function slots(){var g=$("#slots");g.innerHTML="";if(st.day===null){g.innerHTML='<span style="color:var(--soft)">Pick a day first.</span>';return;}
+ SL.forEach(function(s,j){var taken=((st.day*5+j*3)%7===0),b=d.createElement("button");b.type="button";b.className="slot";b.textContent=s;b.disabled=taken;b.setAttribute("aria-pressed","false");b.addEventListener("click",function(){st.time=s;$$(".slot",g).forEach(function(o){o.setAttribute("aria-pressed",o===b)});out();});g.appendChild(b);});}
+slots();
+function setO(id,v,ph){var e=d.getElementById(id);e.textContent=v||ph;e.classList.toggle("no",!v);}
+function out(){setO("o-svc",st.svc,"Pick a service");setO("o-day",st.day!==null?DN[list[st.day].getDay()]+", "+MN[list[st.day].getMonth()]+" "+list[st.day].getDate():"","Pick a day");setO("o-time",st.time,"Pick a time");}
+var form=$("#form"),done=$("#done");
+form.addEventListener("submit",function(e){e.preventDefault();var bad=null;$$("[required]",form).forEach(function(i){var g=!!i.value.trim();i.parentNode.querySelector(".err").hidden=g;i.setAttribute("aria-invalid",!g);if(!g&&!bad)bad=i;});if(bad){bad.focus();return;}form.hidden=true;done.hidden=false;done.focus();});
+$("#again").addEventListener("click",function(){form.reset();st={svc:null,day:null,time:null};$$("[aria-pressed]",$("#panel")).forEach(function(b){b.setAttribute("aria-pressed","false")});slots();out();$$(".err",form).forEach(function(e){e.hidden=true});done.hidden=true;form.hidden=false;});
 })();
-
-(function(){var S=window.__site,L=[].slice.call(document.querySelectorAll(".layer"));S.onTick=function(vh){if(S.RM)return;var y=scrollY;L.forEach(function(l){l.style.transform="translate3d(0,"+(y*parseFloat(l.getAttribute("data-sp"))).toFixed(1)+"px,0)"});};S.tick();})();
 </script>
 </body>
 </html>
